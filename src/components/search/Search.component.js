@@ -5,10 +5,6 @@ import {
   setSearchQuery,
 } from '../../actions/movies.actions';
 
-const StyledSearch = styled.div`
-  display: flex;
-`;
-
 const StyledSearchInput = styled.input`
   border-radius: 5px;
   height: 32px;
@@ -32,13 +28,11 @@ export default function Search() {
   };
 
   return (
-    <StyledSearch>
-      <StyledSearchInput
-        placeholder="Search for a movie..."
-        value={searchQuery}
-        onChange={onSearchChange}
-        onKeyDown={onSearchKeyDown}
-      />
-    </StyledSearch>
+    <StyledSearchInput
+      placeholder="Search for a movie..."
+      value={searchQuery}
+      onChange={onSearchChange}
+      onKeyDown={onSearchKeyDown}
+    />
   );
 }
